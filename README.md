@@ -23,6 +23,7 @@ CONTENTS:
 **1. REQUIREMENTS**
 --------------------------------------------------
 Python version: >= 3.8
+download and install ngrok at https://ngrok.com
 
 Install required packages:
 > pip install -r requirements.txt
@@ -48,12 +49,11 @@ B. LAUNCH FLASK SERVER (BACKEND)
 1. Open terminal in the project directory.
 2. Run:
 > python flask_server.py
-
-3. The server should run at http://127.0.0.1:5000
-4. If you want remote access (for Mailgun webhook):
-   - Use `ngrok`: https://ngrok.com/
-   - Run: `ngrok http 5000`
+3. If you want remote access (for Mailgun webhook):
+   - Run in new terminal :
+   - > ngrok http 5000
    - Copy the HTTPS URL and paste it into `FLASK_SERVER_URL` in `frontend&verification2.py`.
+4. The server should run at http://127.0.0.1:5000
 
 C. RUN PYQT5 DESKTOP APP (FRONTEND)
 -----------------------------------
